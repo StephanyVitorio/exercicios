@@ -25,6 +25,12 @@ public class Formulario {
 		public void addCampo(Campo campo){
 			this.campos.add(campo);
 		}
+		
+		public Campo listarItens(String a){
+			Campo c =new Campo(a);
+			mapcampo.put(a, c);
+			return c;
+		}
 
 	}
 

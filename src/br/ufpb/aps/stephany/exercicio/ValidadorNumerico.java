@@ -16,9 +16,9 @@ public class ValidadorNumerico implements Validador {
 		try{
 			int v = Integer.parseInt(valor);
 			if(v < min)
-				throw new ValorInvalidoException("valor eh menor que "+min);
+				throw new ValorInvalidoException("valor eh minimo de idade eh "+min);
 			if(v > max)
-				throw new ValorInvalidoException("valor eh maior que "+max);
+				throw new ValorInvalidoException("valor maximo de idade eh "+max);
 		}catch(NumberFormatException e){
 			throw new ValorInvalidoException("valor nao eh um inteiro");
 		}
