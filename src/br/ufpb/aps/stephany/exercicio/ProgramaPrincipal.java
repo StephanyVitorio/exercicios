@@ -1,6 +1,5 @@
 package br.ufpb.aps.stephany.exercicio;
 
-import javax.swing.JOptionPane;
 
 public class ProgramaPrincipal {
 		

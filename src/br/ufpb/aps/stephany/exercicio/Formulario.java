@@ -11,16 +11,11 @@ import javax.swing.JOptionPane;
 public class Formulario {
 		
 		private List<Campo> campos;
-		private String nome;
 		private Map<String,Campo> mapcampo;
 	
 		
+				
 		public Formulario(){
-			this("");
-		}
-		
-		public Formulario(String nome){
-			this.nome = nome;
 			this.campos = new LinkedList<Campo>();
 			this.mapcampo = new HashMap<String,Campo>();
 		}
@@ -49,8 +44,10 @@ public class Formulario {
 		                "[F]- Finaliza \n " ;
 				return JOptionPane.showInputDialog(menu2);
 			}
+		
 		 public void executar()  {
 
+			 
 				int opcao1 = Integer.parseInt(menu());
 				while(opcao1 != 3) {
 					switch (opcao1) {
@@ -58,7 +55,7 @@ public class Formulario {
 						obterdados();
 						break;
 					case 2:
-						MostraDados();
+						//MostraDados();
 						break;
 								                          }
 					//opcao1 = Integer.parseInt(menu());
@@ -117,7 +114,7 @@ public class Formulario {
 		         						obterdados();
 		         						break;
 		         					case 2:
-		         						MostraDados();
+		         						//MostraDados();
 		         						break;
 		         				  }
 		         					//opc = Integer.parseInt(menu());
@@ -129,14 +126,14 @@ public class Formulario {
 	
 				
 		 
-		 public void MostraDados(){
+	/*	 public void MostraDados(){
 					String opcao= menu();
 					int op = Integer.parseInt(opcao);
 
 					if(op==2){	                   
 			                    String itensCadastrados=JOptionPane.showInputDialog("Lista de Itens Cadastrados:\n");				    			
 			                 }
-				}
+				}*/
 
 	}
 
