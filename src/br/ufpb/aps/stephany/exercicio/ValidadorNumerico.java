@@ -3,12 +3,11 @@ package br.ufpb.aps.stephany.exercicio;
 
 public class ValidadorNumerico implements Validador {
 
-	private int min;
-	private int max;
+	private int min=0;
+	private int max=150;
 	
-	public ValidadorNumerico(int min,int max){
-		this.min = min;
-		this.max = max;
+	public ValidadorNumerico(){
+		
 	}
 	
 	@Override

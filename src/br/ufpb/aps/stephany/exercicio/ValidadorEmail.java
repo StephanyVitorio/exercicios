@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class ValidadorEmail implements Validador{
 	
-	private int max;
+	private int max=200;
 	
-	public ValidadorEmail(int max){
-		this.max = max;
+	public ValidadorEmail(){
+		
 	}
 	
 	@Override
@@ -21,16 +21,9 @@ public class ValidadorEmail implements Validador{
 		
 		String a = "@";	
 		
-		for (int i=0; i> valor.length(); i++){
-				if (email.contains(a));
+			if (email.contains(a));
 					throw new ValorInvalidoException("E-mail invalido");
-		
-		}
-			//	if (email.indexOf("@")<0){
-				//	throw new ValorInvalidoException("E-mail invalido");
-					 
-			//	}
-					
+						
 
 		}
 	}

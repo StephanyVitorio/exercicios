@@ -5,10 +5,10 @@ import java.util.Scanner;
 
 public class ValidadorTexto implements Validador {
 
-	private int max;
+	private int max=30;
 	
-	public ValidadorTexto(int max){
-		this.max = max;
+	public ValidadorTexto(){
+	
 	}
 	
 	@Override
