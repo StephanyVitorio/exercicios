@@ -1,5 +1,7 @@
 package br.ufpb.aps.stephany.exercicio;
 
+import javax.swing.JOptionPane;
+
 public class Campo {
 	
 	private Validador validador;
@@ -17,6 +19,7 @@ public class Campo {
 		this.label = label;
 		this.id = id;
 		this.erro = "";
+		this.valor=valor;
 		
 		switch (id){
 		
@@ -103,10 +106,11 @@ public class Campo {
 
 	public boolean validar(){
 		try{
-			this.validador.validar(valor);
+			this.validador.validar(valor);	
 			return true;
 		}catch(ValorInvalidoException e){
 			this.erro = e.getMessage();
+			JOptionPane.showMessageDialog(null,e.getMessage());
 			return false;
 		}
 	}
@@ -115,8 +119,8 @@ public class Campo {
 		return this.erro;
 	}
 	
-	//public String toString(){	
-	//	return "Nome : "+getnome+"\nIdade : "+idade+"\nE-mail : "+email;
-	//}
+	public String toString(){	
+		return getLabel()+" : "+ getValor();
+	}
 
 }
