@@ -1,5 +1,6 @@
 package br.ufpb.aps.stephany.exercicio2;
 
+
 import java.util.LinkedList;
 import java.util.List;
 
