@@ -1,6 +1,5 @@
 package br.ufpb.aps.stephany.exercicio2;
 
-
 import java.util.LinkedList;
 import java.util.List;
 
@@ -96,14 +95,47 @@ public class Formulario {
 
 				}
 
+				String login = JOptionPane
+						.showInputDialog("Digite o seu login");
+				Campo campoLogin = new Campo(Campo.LOGIN, "login", login);
+
+				while (campoLogin.validar() == false) {
+					login = JOptionPane.showInputDialog("Digite o seu login");
+					campoLogin.setValor(login);
+
+				}
+				String senhaNumerica = JOptionPane
+						.showInputDialog("Digite sua senha numerica");
+				Campo senhaN = new Campo(Campo.SENHANUMERICA, "SENHA NUMERICA",
+						senhaNumerica);
+
+				while (senhaN.validar() == false) {
+					senhaNumerica = JOptionPane
+							.showInputDialog("Digite o sua senha numerica");
+					senhaN.setValor(senhaNumerica);
+
+				}
+
+				String senhaTexto = JOptionPane
+						.showInputDialog("Digite a sua senha texto");
+				Campo senhaT = new Campo(Campo.SENHATEXTO, "SENHA TEXTO", senhaTexto);
+
+				while (senhaT.validar() == false) {
+					senhaTexto = JOptionPane
+							.showInputDialog("Digite a sua senha texto");
+					senhaT.setValor(senhaTexto);
+
+				}
 				if (campotexto.validar() && campoemail.validar()
-						&& campoidade.validar()) {
+						&& campoidade.validar() && campoLogin.validar()) {
 					addCampo(campotexto);
 					addCampo(campoemail);
 					addCampo(campoidade);
+					addCampo(campoLogin);
+					addCampo(senhaT);
+					addCampo(senhaN);
 				}
 
-				// obterdados();
 				opcao2 = menu2();
 				if (opcao2.equalsIgnoreCase("f"))
 					break;
