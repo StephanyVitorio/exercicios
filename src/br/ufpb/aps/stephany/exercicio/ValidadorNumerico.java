@@ -19,7 +19,8 @@ public class ValidadorNumerico implements Validador {
 		if (v > max) {
 			throw new ValorInvalidoException("valor maximo de idade eh " + max);
 		}
-		 } catch (NumberFormatException e) {
+		 
+		 }catch (NumberFormatException e) {
 				throw new ValorInvalidoException("Digite um valor inteiro");
 			}
 	}
