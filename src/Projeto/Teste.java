@@ -325,6 +325,7 @@ public class Teste {
 		
 		List<Artigo> artigos = fachada.listarArtigo();
 		fachada.compartilharMaterial(ar);
+		fachada.listarArtigo();
 		int size = artigos.size();
 		Assert.assertEquals(1, size);
 	}
